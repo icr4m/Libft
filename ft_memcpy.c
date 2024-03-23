@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 17:09:20 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/23 22:17:50 by ijaber           ###   ########.fr       */
+/*   Created: 2024/03/23 19:17:48 by ijaber            #+#    #+#             */
+/*   Updated: 2024/03/23 20:03:01 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	ft_memset(s, '\0', n);
-}
+	char *tmp1;
+	char *tmp2;
 
-int	main(void)
-{
-	char *str = "Hello, World!";
-	char *str2 = "Hello, World!";
+	if (!dst && !src)
+		return (NULL);
+	tmp1 = (unsigned char *)dst;
+	tmp2 = (unsigned char *)src;
 
-	ft_bzero(str, (size_t)6);
-	printf("bzero homemade :%s\n", str);
-	bzero(str, (size_t)6);
-	printf("bzero OG:%s\n", str2);
+	while (n != 0)
+	{
+		*dst = *src;
+		*src++;
+		*dst++;
+		n--;
+	}
 }

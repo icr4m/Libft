@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 09:33:28 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/23 19:08:47 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/23 22:17:20 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include <stdlib.h>
 # include <strings.h>
 
-void			ft_bzero(void *s, size_t n);
 int				ft_atoi(const char *string);
+void			ft_bzero(void *s, size_t n);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);

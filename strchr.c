@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 17:09:20 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/23 22:17:50 by ijaber           ###   ########.fr       */
+/*   Created: 2024/03/23 22:23:57 by ijaber            #+#    #+#             */
+/*   Updated: 2024/03/23 22:48:32 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	ft_memset(s, '\0', n);
+	int	i;
+	int	cc;
+
+	cc = (char)c;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == cc)
+			return ((char *)&s[i]);
+		i++;
+	}
+	return (NULL);
 }
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	char *str = "Hello, World!";
-	char *str2 = "Hello, World!";
-
-	ft_bzero(str, (size_t)6);
-	printf("bzero homemade :%s\n", str);
-	bzero(str, (size_t)6);
-	printf("bzero OG:%s\n", str2);
+	if (ac == 3)
+	{
+		printf("test :%s", ft_strchr(av[1], atoi(av[2])));
+	}
 }
