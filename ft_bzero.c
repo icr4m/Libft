@@ -6,20 +6,15 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 17:09:20 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/23 18:46:09 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/23 19:09:25 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*tmp;
-
-	tmp = (char *)s;
-	ft_memset(tmp, '\0', n);
+	ft_memset(s, '\0', n);
 }
 
 int	main(void)
