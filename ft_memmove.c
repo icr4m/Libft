@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 19:49:10 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/24 01:13:35 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/24 01:18:57 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i < len)
+		while (i++ < len)
 		{
 			tmp_dst[i] = tmp_src[i];
-			i++;
 		}
 	}
 	return (dst);
