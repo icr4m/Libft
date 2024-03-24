@@ -28,14 +28,17 @@ SRCS = 	ft_atoi.c \
 # Object files
 OBJS = $(SRCS:.c=.o)
 
+# Archives
+AR = ar rc 
+
 # rules
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	cc -o $@ $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 .c.o: 
-	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+	$(CC) $(CFLAGS) -c -include libft.h $< -o ${<:.c=.o}
 
 clean:
 	rm -rf ${OBJS}
