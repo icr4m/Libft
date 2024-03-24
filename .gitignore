@@ -1,4 +1,5 @@
 libtest/
+venv/
 *.o
 *.a
 *.out

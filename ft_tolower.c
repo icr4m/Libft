@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:04:45 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/24 02:23:50 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/24 02:41:59 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_tolower(int c)
 {
+	if (c == -1)
+		return (c);
 	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+		return ((unsigned char)(c + 32));
+	return ((unsigned char)(c));
 }
