@@ -1,5 +1,6 @@
 libtest/
 venv/
+.vscode/
 *.o
 *.a
 *.out
