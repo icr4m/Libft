@@ -1,0 +1,5 @@
+libtest/
+*.o
+*.a
+*.out
+libft.a

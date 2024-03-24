@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 09:33:28 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/24 00:57:58 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/24 01:45:40 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void			*ft_memset(void *b, int c, size_t len);
 char			*ft_strchr(const char *s, int c);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, size_t size);
-int				ft_strlen(char *str);
+int				ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
 int				ft_tolower(int c);
