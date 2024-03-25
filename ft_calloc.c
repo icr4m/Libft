@@ -1,43 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/24 17:05:27 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/25 21:25:04 by ijaber           ###   ########.fr       */
+/*   Created: 2024/03/25 21:26:43 by ijaber            #+#    #+#             */
+/*   Updated: 2024/03/25 21:52:47 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s1)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*str;
+	char	*tmp;
 	size_t	i;
 
-	str = (char *)malloc(ft_strlen(s1) * sizeof(char) + 1);
-	if (!str)
-		return (NULL);
+	tmp = malloc(count * (size + 1));
+	(if != tmp) return (NULL);
 	i = 0;
-	while (s1[i])
+	while (i < count * size)
 	{
-		str[i] = s1[i];
-		i++;
+		tmp[i++] = 0;
 	}
-	str[i] = '\0';
-	return (str);
+	return (tmp);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		printf("new string :%s\n", ft_strdup(av[1]));
-		printf("new string :%s\n", strdup(av[1]));
-	}
-	return (0);
-}
-*/
