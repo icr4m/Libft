@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 16:07:57 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/29 17:05:45 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/03/29 17:20:20 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 
 	if (!set || !s1)
-		return (0);
+		return (ft_strdup(""));
 	while (*s1 != '\0')
 	{
 		if (ft_checkset((char)*s1, set))
