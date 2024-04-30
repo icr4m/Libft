@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 02:47:51 by ijaber            #+#    #+#             */
-/*   Updated: 2024/04/30 11:48:43 by ijaber           ###   ########.fr       */
+/*   Created: 2024/04/30 11:45:49 by ijaber            #+#    #+#             */
+/*   Updated: 2024/04/30 12:00:21 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+static void	print_nb(unsigned int n, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	if (n > 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		print_nb(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
 
-/*
-int	main(int ac, char **av)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (ac == 2)
+	unsigned int	num;
+
+	if (n < 0)
 	{
-		ft_putstr_fd(av[1], 2);
+		ft_putchar_fd('-', fd);
+		num = -n;
 	}
+	else
+		num = n;
+	if (n == 0)
+		ft_putchar_fd('0', fd);
+	else
+		print_nb(num, fd);
+}
+
+/*
+int	main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
 }
 */
