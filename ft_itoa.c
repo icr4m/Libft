@@ -6,21 +6,21 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:55:14 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/14 15:00:29 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/15 18:32:10 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Donne la valeur absolue
-unsigned int	get_abs(int n)
+static unsigned int	get_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-size_t	nb_len(int nb)
+static size_t	nb_len(int nb)
 {
 	int	len;
 
@@ -33,7 +33,7 @@ size_t	nb_len(int nb)
 	return (len);
 }
 
-void	fill_number(char *src, int nb, unsigned int len)
+static void	fill_number(char *src, int nb, unsigned int len)
 {
 	unsigned int	i;
 	unsigned int	n_abs;
