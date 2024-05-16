@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:55:14 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/15 18:32:10 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/16 15:33:14 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,10 @@ char	*ft_itoa(int n)
 	fill_number(new + is_neg, n, len);
 	return (new);
 }
+/*
+int	main(void)
+{
+	printf("string :%s", ft_itoa(2147483647));
+	return (0);
+}
+*/
