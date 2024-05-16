@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 23:20:07 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/23 23:44:08 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/16 17:19:48 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
 	char	*result;
 
-	i = 0;
-	while (s[i] != '\0')
+	result = NULL;
+	c = (char)c;
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-		{
-			result = ((char *)&s[i]);
-			i++;
-		}
-		i++;
+		if (*s == c)
+			result = ((char *)s);
+		s++;
 	}
+	if (c == '\0')
+		return ((char *)s);
 	return (result);
 }
 
@@ -35,7 +34,7 @@ int	main(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		printf("test :%s", ft_strrchr(av[1], 'o'));
+		printf("test :%s", ft_strrchr(av[1], '0'));
 	}
 }
 */
