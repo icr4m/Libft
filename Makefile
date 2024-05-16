@@ -74,9 +74,11 @@ bonus: $(OBJS_B)
 	$(AR) $(NAME) $(OBJS_B)
 	
 clean:
-	rm -rf *.o
+	rm -rf ${OBJS} ${OBJS_B}
 
 fclean: clean
 	rm -rf $(NAME)
+
+rebonus : fclean bonus
 
 re: fclean all
