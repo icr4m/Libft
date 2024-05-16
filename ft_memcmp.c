@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 14:22:50 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/24 15:14:06 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/16 15:59:49 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (n != '0')
+	while (i < n)
 	{
 		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
 		{

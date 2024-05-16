@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 11:16:09 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/16 15:40:13 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/16 15:45:21 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_atoi(const char *string)
 	}
 	return (number * sign);
 }
-
+/*
 int	main(int ac, char **av)
 {
 	if (ac == 2)
@@ -64,3 +64,4 @@ int	main(int ac, char **av)
 		printf("The value of the real atoi is :%d", atoi(av[1]));
 	}
 }
+*/
