@@ -5,3 +5,5 @@ venv/
 *.a
 *.out
 libft.a
+a
+libtester/
