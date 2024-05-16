@@ -41,8 +41,22 @@ SRCS = 	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c
 
+# Bonus Files
+SRCS_B =	ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c\
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c 
+
 # Object files
 OBJS = $(SRCS:.c=.o)
+
+# Object bonus 
+OBJS_B = $(SRCS_B:.c=.o)
 
 # Archives
 AR = ar rc 
@@ -56,8 +70,11 @@ $(NAME) : $(OBJS)
 .c.o: 
 	$(CC) $(CFLAGS) -c -include libft.h $< -o ${<:.c=.o}
 
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $(OBJS_B)
+	
 clean:
-	rm -rf ${OBJS}
+	rm -rf *.o
 
 fclean: clean
 	rm -rf $(NAME)
