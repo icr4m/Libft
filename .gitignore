@@ -1,9 +1,9 @@
 libtest/
 venv/
 .vscode/
+libfTester/
 *.o
 *.a
 *.out
 libft.a
 a
-libfTester/
