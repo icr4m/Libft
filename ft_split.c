@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 01:40:55 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/17 17:05:13 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/17 19:11:24 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,14 +101,14 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-/*
 int	main(int ac, char **av)
 {
 	int		i;
 	char	**split;
 
 	(void)ac;
-	split = ft_split(av[1], 'g');
+	(void)av;
+	split = ft_split("hello!  ", 32 : ' ');
 	i = 0;
 	while (split[i])
 	{
@@ -116,4 +116,3 @@ int	main(int ac, char **av)
 		i++;
 	}
 }
-*/
