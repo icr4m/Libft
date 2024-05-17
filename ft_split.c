@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 01:40:55 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/17 16:47:37 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/17 17:05:13 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
+/*
 int	main(int ac, char **av)
 {
 	int		i;
@@ -115,3 +116,4 @@ int	main(int ac, char **av)
 		i++;
 	}
 }
+*/
