@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:23:57 by ijaber            #+#    #+#             */
-/*   Updated: 2024/03/29 17:47:27 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/17 15:22:14 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	char	*str;
-	size_t	i;
+	char	*substr;
 
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
 	else if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	if (s == NULL)
+		substr = NULL;
+	else
 	{
-		str[i] = s[i + start];
-		i++;
+		substr = (char *)malloc(sizeof(char) * (len + 1));
+		if (!substr)
+			return (NULL);
+		ft_strlcpy(substr, (char *)s + start, len + 1);
 	}
-	return (str);
+	return (substr);
 }
-
 /*
 int	main(void)
 {
-	printf("new sous string :%s\n", ft_substr("Bonjour comment ca va?", 5, 8));
+	printf("new sous string :%s\n", ft_substr("Bonjour comment ca va?", 2, 3));
 }
 */

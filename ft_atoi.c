@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 11:16:09 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/16 15:45:21 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/17 14:50:54 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 static bool	is_whitespace(char c)
 {
 	return ((c >= 9 && c <= 13) || c == 32);
-}
-
-static int	nbr_len(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
 }
 
 int	ft_atoi(const char *string)
@@ -42,11 +32,6 @@ int	ft_atoi(const char *string)
 	}
 	else if (*string == '+')
 		string++;
-	number = nbr_len(string);
-	if (number > 20 && sign < 0)
-		return (0);
-	else if (number > 20 && sign > 0)
-		return (-1);
 	number = 0;
 	while (*string != '\0' && (*string >= '0' && *string <= '9'))
 	{
@@ -55,6 +40,7 @@ int	ft_atoi(const char *string)
 	}
 	return (number * sign);
 }
+
 /*
 int	main(int ac, char **av)
 {
