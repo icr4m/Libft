@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 23:20:07 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/16 17:19:48 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/20 15:21:41 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if (c == '\0')
-		return ((char *)s);
+		result = ((char *)s);
 	return (result);
 }
 
