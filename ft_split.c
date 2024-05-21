@@ -6,7 +6,7 @@
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 01:40:55 by ijaber            #+#    #+#             */
-/*   Updated: 2024/05/20 11:08:15 by ijaber           ###   ########.fr       */
+/*   Updated: 2024/05/21 09:56:26 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ char	**ft_split(char const *s, char c)
 	if (!result)
 		return (0);
 	result = ft_spliting_words(s, c, result, num_words);
+	result[num_words] = NULL;
 	return (result);
 }
 /*
