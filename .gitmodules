@@ -1,6 +1,0 @@
-[submodule "ft_printf"]
-	path = ft_printf
-	url = git@github.com:icr4m/ft_printf.git
-[submodule "gnl"]
-	path = gnl
-	url = git@github.com:icr4m/get_next_line.git
