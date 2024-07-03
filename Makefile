@@ -4,8 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Source files
 LIB_SRCS = $(wildcard libft/srcs/*.c)
-PRINTF_SRCS = $(wildcard ft_printf/ ft_printf_utils.c ft_printf.c ft_put_printf.c)
-GNL_SRCS = $(addprefix gnl/ , get_next_line_bonus.c get_next_line_utils_bonus.c)
+PRINTF_SRCS = $(addprefix ft_printf/, ft_printf_utils.c ft_printf.c ft_put_printf.c)
+GNL_SRCS = $(addprefix gnl/, get_next_line_bonus.c get_next_line_utils_bonus.c)
 
 INCLUDES = -Ilibft/includes -Ignl -Ift_printf
 
