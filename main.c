@@ -1,43 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaber <ijaber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 16:41:49 by ijaber            #+#    #+#             */
-/*   Updated: 2024/07/03 15:37:31 by ijaber           ###   ########.fr       */
+/*   Created: 2024/07/03 15:24:37 by ijaber            #+#    #+#             */
+/*   Updated: 2024/07/03 15:28:24 by ijaber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdio.h>
+#include "libft/includes/ft_printf.h"
 
-int	ft_printf(char const *str, ...)
+int	main(void)
 {
-	size_t	count;
-	va_list	arg;
-	size_t	i;
-
-	i = 0;
-	count = 0;
-	va_start(arg, str);
-	if (str == NULL)
-		return (-1);
-	while (str[i] != '\0')
-	{
-		if (str[i] == '%')
-		{
-			count += ft_r_type(str[i + 1], arg);
-			i += 2;
-		}
-		else
-		{
-			ft_putchar(str[i]);
-			i++;
-			count++;
-		}
-	}
-	va_end(arg);
-	return (count);
+	ft_printf("Hello, %s!\n", "world");
+	return (0);
 }
