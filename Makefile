@@ -16,6 +16,7 @@ AR = ar rc
 # Colors
 RED	= "\033[0;31m"
 GREEN = "\033[0;32m"
+GRAS = "\033[1m"
 NO_COLOR = "\033[0m"
 
 # progress bar
@@ -25,8 +26,17 @@ define progress_bar
 		echo -n "■"; \
 		sleep 0.01; \
 	done
-	@echo "]"
-	@echo "Libft maked."$(NO_COLOR)
+	@echo "]" $(GRAS)"Libft maked.✅"$(NO_COLOR)
+endef
+
+# progress bar
+define un_progress_bar
+	@echo -n $(RED)"["
+	@for i in $$(seq 1 $(words $(LIB_SRCS))); do \
+		echo -n "■"; \
+		sleep 0.01; \
+	done
+	@echo "]" $(GRAS)"Libft deleted.🚯"$(NO_COLOR)
 endef
 
 # rules
@@ -41,7 +51,7 @@ $(NAME) : $(LIB_OBJS)
 
 clean:
 	@rm -rf ${LIB_OBJS}
-	@echo $(RED) Removing libft.a and .o files$(NO_COLOR)
+	@$(call un_progress_bar)
 
 fclean: clean
 	@rm -rf $(NAME)
